@@ -30,9 +30,9 @@
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="right: 0;left:auto;">
                             <li><a class="dropdown-item" href="#">My Dashboard</a></li>
                             <li><a class="dropdown-item" href="#"
-                                    onclick="event.preventDefault(); documentGetElemenById('logout-form').submit()">Sign
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Sign
                                     Out</a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="post" style="display:none;">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 </form>
                             </li>
